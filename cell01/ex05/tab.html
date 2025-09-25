@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* จัดตารางให้กินความกว้างทั้งหมด และสูงพอเห็นเป็น "2 กล่อง" */
+    table {
+      width: 100%;
+      height: 60vh;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    td {
+      width: 50%;
+      text-align: center;
+      vertical-align: middle;
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      font-weight: 700;
+      color: #222;
+      border: 2px solid #000; /* เส้นขอบให้เห็นชัด */
+      padding: 16px;
+    }
+    .left  { background: #ffd166; } /* สีที่ 1 */
+    .right { background: #06d6a0; } /* สีที่ 2 */
+    @media (max-width: 640px) {
+      /* จอเล็ก: แสดงเป็นสองแถว (หากอยากคง “สองช่อง” แนวนอนตลอด ให้ลบบล็อกนี้) */
+      table, tbody, tr { display: block; height: auto; }
+      td { width: 100%; box-sizing: border-box; }
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="left">This is the LEFT tab</td>
+      <td class="right">This is the RIGHT tab</td>
+    </tr>
+  </table>
+</body>
+</html>
