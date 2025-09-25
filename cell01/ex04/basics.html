@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Basics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --pink: #ffc0cb; }
+    body {
+      margin: 0;
+      background: var(--pink);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    h1 {
+      color: #fff;
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin: 40px 16px;
+    }
+    .shops {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 24px auto;
+      max-width: 1000px;
+      padding: 0 16px;
+    }
+    .shop {
+      flex: 1 1 320px;
+      max-width: 460px;
+      text-align: center;
+    }
+    .shop img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.15);
+      background: #fff; /* เผื่อภาพโลโก้เป็นพื้นใส */
+      padding: 16px;
+    }
+    .shop a {
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid rgba(0,0,0,.2);
+      margin: 40px 0;
+    }
+    footer {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-style: italic;
+      text-align: right;
+      padding: 0 16px 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- หัวข้อใหญ่ สีขาว ตรงกลาง และมีอักขระพิเศษอย่างน้อย 1 ตัว -->
+  <h1>Online Shopping ✨</h1>
+
+  <!-- รูปภาพ 2 รูปของร้านค้าออนไลน์ เรียงข้างกัน พร้อมลิงก์ใต้รูป -->
+  <div class="shops">
+    <figure class="shop">
+      <a href="https://www.amazon.com/" target="_blank" rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" />
+      </a>
+      <figcaption>
+        <a href="https://www.amazon.com/" target="_blank" rel="noopener">Visit Amazon</a>
+      </figcaption>
+    </figure>
+
+    <figure class="shop">
+      <a href="https://www.ebay.com/" target="_blank" rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" alt="eBay" />
+      </a>
+      <figcaption>
+        <a href="https://www.ebay.com/" target="_blank" rel="noopener">Visit eBay</a>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- เส้นคั่นแนวนอน -->
+  <hr />
+
+  <!-- ลิขสิทธิ์ชิดขวา ตัวเอียง และ monospace -->
+  <footer>© nsingnia 2025</footer>
+</body>
+</html>
