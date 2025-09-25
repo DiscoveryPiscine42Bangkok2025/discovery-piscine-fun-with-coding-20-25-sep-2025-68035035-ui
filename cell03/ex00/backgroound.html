@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Change background</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="backgroound.css" />
+</head>
+<body>
+  <button id="change" type="button">Change background</button>
+
+  <script>
+    function randomColor() {
+      // สร้างสีแบบ #RRGGBB
+      return '#' + Math.floor(Math.random() * 0xFFFFFF)
+        .toString(16)
+        .padStart(6, '0');
+    }
+
+    const btn = document.getElementById('change');
+    btn.addEventListener('click', () => {
+      const c = randomColor();
+      document.body.style.backgroundColor = c;
+      // ปรับ label เพื่อการเข้าถึง (optional)
+      btn.setAttribute('aria-label', 'Background is ' + c);
+    });
+  </script>
+</body>
+</html>
